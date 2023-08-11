@@ -152,7 +152,8 @@ cabal run
 Running this command will build the application, reveal executable links, and then execute the application, displaying its output.
 
 ## Smart Contract Workflow
-[Course Enrollment & Subscription]()
+[Course Enrollment & Subscription](https://github.com/KonmaLabzIO/nuveda/tree/main/Base%20Contract/Course_enrollement)
+[Royalty Distribution]()
 
 
 
