@@ -19,6 +19,7 @@
 +	Security Considerations
 +	Conclusion
 +	Glossary
++	Running haskell code in cabal
 
 
  
@@ -41,34 +42,34 @@ Addressing the issues of limited access to quality educational content, the abse
 
 ### 3. Smart Contracts in Knowledge Ledger
 #### •	Course Enrollment Contract
-The Course Enrollment Contract handles the enrollment process for courses within the Knowledge Ledger ecosystem. It ensures that students meet prerequisites, validates payments, and grants access upon successful enrollment.
-Input: John enrolls in Course 1 (Advance Haskell) after confirming prerequisites.
-Output: John successfully enrolls in the course; his enrollment status and completed courses are updated.
-Mechanism: The code validates prerequisites, enrolls users, updates their records, and confirms successful enrollment.
+The Course Enrollment Contract handles the enrollment process for courses within the Knowledge Ledger ecosystem. It ensures that students meet prerequisites, validates payments, and grants access upon successful enrollment.  <br>
+`Input`: John enrolls in Course 1 (Advance Haskell) after confirming prerequisites.<br>
+`Output`: John successfully enrolls in the course; his enrollment status and completed courses are updated.<br>
+`Mechanism`: The code validates prerequisites, enrolls users, updates their records, and confirms successful enrollment.<br>
 
 #### •	Royalty Distribution Contract
-This contract facilitates revenue sharing between content creators and Knowledge Ledger, ensuring that instructors receive fair compensation for their contributions. The contract enforces predefined terms and conditions for royalty distribution.
-Input: Number of content creators, their names, and respective royalty percentages.
-Output: Royalty distribution as a list of tuples containing creator names and their calculated royalty shares.
-Mechanism: The code takes inputs for the number of content creators, their names, and royalty percentages. It then calculates the royalty distribution based on the provided percentages, and outputs a list of tuples representing the distribution.
+This contract facilitates revenue sharing between content creators and Knowledge Ledger, ensuring that instructors receive fair compensation for their contributions. The contract enforces predefined terms and conditions for royalty distribution.<br>
+`Input`: Number of content creators, their names, and respective royalty percentages,Prize.<br>
+`Output`: Royalty distribution as a list of tuples containing creator names and their calculated royalty shares.<br>
+`Mechanism`: The code takes inputs for the number of content creators, their names, and royalty percentages. It then calculates the royalty distribution based on the provided percentages, and outputs a list of tuples representing the distribution.<br>
 
 #### •	Learning Progress Tracking Contract
-The Learning Progress Tracking Contract records and tracks the progress of learners, including completed modules, assessments, and achievements. This transparent record of accomplishments encourages learners to stay engaged and motivated. 
-Input: User's learning data including completed modules, assessments, and achievements.
-Output: LearningProgress object containing a summary of the user's progress and achievements.
-Mechanism: The code collects and organizes user input regarding completed modules, assessments, and achievements, then constructs a LearningProgress object to present the user's learning journey.
+The Learning Progress Tracking Contract records and tracks the progress of learners, including completed modules, assessments, and achievements. This transparent record of accomplishments encourages learners to stay engaged and motivated. <br>
+`Input`: User's learning data including completed modules, assessments, and achievements.<br>
+`Output`: LearningProgress object containing a summary of the user's progress and achievements.<br>
+`Mechanism`: The code collects and organizes user input regarding completed modules, assessments, and achievements, then constructs a LearningProgress object to present the user's learning journey.<br>
 
 #### •	Tokenization Contract
-The Tokenization Contract converts certificates or credentials earned through Knowledge Ledger into unique tokens on the blockchain. These tokens provide a tamper-proof way to verify and transfer certifications, making them more portable and accessible.
-Input: User's name, number of completed courses, course IDs and names, certificate ID.
-Output: Tokenized certificate information containing owner name, course details, and token ID.
-Mechanism: The code tokenizes completed course information and certificate ID to generate a unique token with relevant course and user details.
+The Tokenization Contract converts certificates or credentials earned through Knowledge Ledger into unique tokens on the blockchain. These tokens provide a tamper-proof way to verify and transfer certifications, making them more portable and accessible.<br>
+`Input`: User's name, number of completed courses, course IDs and names, certificate ID.<br>
+`Output`: Tokenized certificate information containing owner name, course details, and token ID.<br>
+`Mechanism`: The code tokenizes completed course information and certificate ID to generate a unique token with relevant course and user details.<br>
 
 #### •	Certificate Issuance
-The Certificate Issuance Smart Contract on the Knowledge Ledger platform is a cutting-edge solution that automates and streamlines the process of issuing educational certificates. Built on the secure Cardano blockchain, this smart contract ensures tamper-proof verification and transparency in credentialing.
-Input: User's username, Certificate ID (700), Course name (Basic Haskell), Token for Course (Data Structures)
-Output: Certificate issued confirmation for the user (jack123) upon completing the course (Basic Haskell), with instructions to view and download the certificate from their profile.
-Mechanism: The code takes user inputs, validates completion of the course, generates a certificate, associates it with the user's profile, and provides instructions for accessing the certificate.
+The Certificate Issuance Smart Contract on the Knowledge Ledger platform is a cutting-edge solution that automates and streamlines the process of issuing educational certificates. Built on the secure Cardano blockchain, this smart contract ensures tamper-proof verification and transparency in credentialing.<br>
++ `Input`: User's username, Certificate ID (700), Course name (Basic Haskell), Token for Course (Data Structures)<br>
++ `Output`: Certificate issued confirmation for the user (jack123) upon completing the course (Basic Haskell), with instructions to view and download the certificate from their profile.<br>
++ `Mechanism`: The code takes user inputs, validates completion of the course, generates a certificate, associates it with the user's profile, and provides instructions for accessing the certificate.<br>
 
 ### 4.Flowchart
 To start using the Knowledge Ledger platform and its smart contracts, follow these steps:
@@ -129,7 +130,7 @@ First, clone the repository containing the Haskell project source code. You can 
 ```
 https://github.com/KonmaLabzIO/nuveda
 ```
-#### Step 2: Initialize Cabal Confuguration
+#### Step 2: Initialize Cabal Configuration
 Navigate to the project directory and initialize the Cabal configuration. Cabal is a build tool for Haskell projects that helps manage dependencies and build processes. Run the following command:
 ```
 cabal init
@@ -142,6 +143,18 @@ Once the .cabal file is generated, you can build the project by executing the fo
 cabal build
 ```
 This command will compile the project source code and create executable files.
+
+#### Step 4: Build and Execute with a Single Command
+You can also use the cabal run command to both build and execute the application. This command simplifies the process:
+```
+cabal run
+```
+Running this command will build the application, reveal executable links, and then execute the application, displaying its output.
+
+## Smart Contract Workflow
+[Course Enrollment & Subscription]()
+
+
 
 
 
